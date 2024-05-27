@@ -1,0 +1,103 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+form {
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 30%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.forecast-section {
+  width: 65%;
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.weather-info {
+  margin-top: 20px;
+}
+
+.forecast {
+  margin-top: 20px;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.forecast-day {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  margin-top: 20px;
+}
+
+
+
+/* Light Mode */
+.light {
+  --header-bg: #282c34;
+  --sidebar-bg: #f0f0f0;
+  --forecast-bg: #e0e0e0;
+  --day-bg: #ffffff;
+  --text-color: #000000;
+}
+
+/* Dark Mode */
+.dark {
+  --header-bg: #1a1a1a;
+  --sidebar-bg: #333333;
+  --forecast-bg: #444444;
+  --day-bg: #555555;
+  --text-color: #ffffff;
+}
+
+/* Apply theme variables */
+.App-header {
+  background-color: var(--header-bg);
+}
+
+.App, .App-header, .sidebar, .forecast-section, .forecast-day {
+  color: var(--text-color);
+}
