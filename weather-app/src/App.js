@@ -7,6 +7,7 @@ const App = () => {
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState(null);
   const [isDarkMode, setIsDarkMode] = useState(null);
+  const rapidApiKey = process.env.RAPID_API_KEY;
   const fetchWeather = async (event) => {
     event.preventDefault();
     const options = {
@@ -18,7 +19,7 @@ const App = () => {
         u: 'f',
       },
       headers: {
-        'X-RapidAPI-Key': 'cd51ca3772msh12684712c5ec13bp12e369jsn82c055ee8bfd',
+        'X-RapidAPI-Key': rapidApiKey,
         'X-RapidAPI-Host': 'yahoo-weather5.p.rapidapi.com',
       },
     };
